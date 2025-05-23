@@ -1,0 +1,10 @@
+# .cursorrules
+
+- Always use uv for package management, never pip
+- Always use uv for environment management, never python environments
+
+## Shortcuts
+- 'kk' - yes, please!
+- 'nah' - no, thank you
+- '?' - why doesn't this work? please explain.
+

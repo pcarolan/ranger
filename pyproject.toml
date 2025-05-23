@@ -1,10 +1,13 @@
 [project]
 name = "ranger"
 version = "0.1.0"
-description = "Add your description here"
+description = "Park assistant"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 dependencies = [
     "requests>=2.32.3",
     "smolagents>=1.16.1",
+    "fire"
 ]
+[project.scripts]
+ranger = "ranger.cli:main"
