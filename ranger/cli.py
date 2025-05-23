@@ -31,12 +31,12 @@ class CLI(object):
                     self.console.print("[yellow]Goodbye! 👋[/yellow]")
                     break
                 
-                # Echo the input with a nice format
+                # Echo the input with a complementary color scheme
                 self.console.print(
                     Panel(
-                        Text(user_input, style="cyan"),
-                        title="[bold]Input[/bold]",
-                        border_style="cyan"
+                        Text(user_input, style="magenta"),
+                        title="[bold]Output[/bold]",
+                        border_style="magenta"
                     )
                 )
             except KeyboardInterrupt:
