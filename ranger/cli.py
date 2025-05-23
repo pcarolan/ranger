@@ -1,6 +1,6 @@
 # /// script
-# requires-python = ">=3.13"
-# dependencies = ["fire"]
+# requires-python = ">=3.10"
+# dependencies = ["fire", "rich"]
 # ///
 
 import fire
@@ -15,7 +15,7 @@ import os
 import logging
 from datetime import datetime
 from pathlib import Path
-from ranger.router import Router
+from router import Router
 
 class CLI(object):
     def __init__(self, debug: bool = False):

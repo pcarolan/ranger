@@ -10,6 +10,18 @@ dependencies = [
     "fire",
     "python-dotenv>=1.1.0",
     "googlemaps>=4.10.0",
+    "rich",
 ]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["cli", "router", "weather"]
+
+[tool.uv]
+package = true
+
 [project.scripts]
-ranger = "ranger.cli:main"
+ranger = "cli:main"

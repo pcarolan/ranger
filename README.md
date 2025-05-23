@@ -1,5 +1,11 @@
 # Ranger
 
+## Setup
+```bash
+uv sync
+uv pip install -e .
+```
+
 ## Prompt Cases
 
 Tools: get_weather, get_travel_duration
