@@ -14,4 +14,8 @@
 ## Shortcuts
 - 'k' - yes, please!
 - 'n' - no, thank you
-- '?' - why doesn't this work? please explain.
+- '?' - why doesn't this work? please explain. Do not fix.
+- 'f' - figure out what's broken and fix it.
+- 'n' - proceed to the next logical step in your reasoning chain.
+- 't' - run tests: pytest -v
+- 'jk' - take a break and tell me a dad joke (non programming related)

@@ -123,7 +123,7 @@ def test_repl_normal_input(cli):
     """Test normal input and response rendering in the REPL."""
     with patch.object(cli, 'input', side_effect=["hello", "exit"]), \
          patch.object(cli.console, 'print') as mock_print, \
-         patch.object(cli.router, 'route', return_value=("response", "thoughts")):
+         patch.object(cli.router, 'route', return_value=("response", "thoughts", ["get_weather"])):
         cli.debug = True
         cli.repl()
         # Should print the response and thoughts

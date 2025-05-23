@@ -9,14 +9,13 @@ from ranger.tools.maps import get_travel_duration
 
 @tool
 def get_weather(location: str) -> str:
-    """Gets the weather for a given location using OpenAI to generate a realistic weather response.
-
-    Args:
-        location: the location for which you want to get the weather
-    """
+    print(f"DEBUG: OpenAIServerModel in get_weather is {OpenAIServerModel!r}")
+    print("DEBUG: About to instantiate OpenAIServerModel with model_id='gpt-4'")
+    model_instance = OpenAIServerModel(model_id="gpt-4")
+    print(f"DEBUG: Instantiated OpenAIServerModel, got {model_instance!r}")
     agent = CodeAgent(
         tools=[],
-        model=OpenAIServerModel(model_id="gpt-4"),
+        model=model_instance,
         additional_authorized_imports=["datetime"]
     )
     
