@@ -13,10 +13,8 @@ def get_weather(location: str) -> str:
 
     Args:
         location: The city or location to get weather information for.
-
-    Returns:
-        A formatted string containing the weather report with temperature,
-        conditions, humidity, and wind speed.
+                 Can be a city name, coordinates, or landmark.
+                 Examples: "New York", "Paris, France", "Mount Everest"
     """
     print(f"DEBUG: OpenAIServerModel in get_weather is {OpenAIServerModel!r}")
     print("DEBUG: About to instantiate OpenAIServerModel with model_id='gpt-4'")

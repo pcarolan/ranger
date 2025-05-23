@@ -55,4 +55,35 @@ def test_get_weather_error_handling():
         importlib.reload(ranger.tools.weather)
         with pytest.raises(Exception) as exc_info:
             ranger.tools.weather.get_weather("Test City")
-        assert "API Error" in str(exc_info.value) 
+        assert "API Error" in str(exc_info.value)
+
+def test_get_weather_docstring():
+    """Test that get_weather has a proper docstring with description."""
+    with patch('smolagents.tool', side_effect=lambda f: f):
+        import ranger.tools.weather
+        importlib.reload(ranger.tools.weather)
+        
+        # Get the function and its docstring
+        func = ranger.tools.weather.get_weather
+        doc = func.__doc__
+        
+        # Verify docstring exists
+        assert doc is not None, "get_weather should have a docstring"
+        
+        # Split into lines and remove empty lines
+        lines = [line.strip() for line in doc.split('\n') if line.strip()]
+        
+        # Verify first line is a description
+        assert lines[0], "First line should be a description"
+        assert not lines[0].startswith('Args:'), "First line should not be Args section"
+        
+        # Verify Args section exists
+        assert any(line.startswith('Args:') for line in lines), "Docstring should have Args section"
+        
+        # Verify location parameter is documented
+        location_doc = False
+        for line in lines:
+            if 'location:' in line.lower():
+                location_doc = True
+                break
+        assert location_doc, "location parameter should be documented" 
