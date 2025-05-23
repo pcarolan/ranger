@@ -54,32 +54,41 @@ class Router:
         
         with self._redirect_stdout():
             response = self.agent.run(prompt)
+            print("DEBUG: raw response =", response)  # Debug print
         
         self.logger.info("-" * 50)
         
         # Split and separate thoughts from final answer
         lines = response.splitlines()
+        print("DEBUG: lines =", lines)  # Debug print
         thoughts = []
         final_lines = []
         tools_used = set()  # Use a set to avoid duplicates
         
         for line in lines:
+            print("DEBUG: processing line =", line)  # Debug print
             if line.strip().startswith("Thought:"):
                 thoughts.append(line.strip())
                 self.logger.info(line.strip())
                 # Track tools used
                 if "using tool:" in line.lower():
-                    tool_name = line.split("using tool:")[-1].strip()
+                    # Extract just the tool name after "using tool:"
+                    tool_name = line.lower().split("using tool:")[-1].strip()
+                    print("DEBUG: extracted tool_name =", tool_name)  # Debug print
                     tools_used.add(tool_name)
                     self.logger.info(f"Found tool used: {tool_name}")
             elif line.strip():
+                print("DEBUG: adding to final_lines =", line)  # Debug print
                 final_lines.append(line)
         
+        print("DEBUG: final_lines =", final_lines)  # Debug print
         final_response = "\n".join(final_lines).strip()
+        print("DEBUG: final_response =", final_response)  # Debug print
         thoughts_text = "\n".join(thoughts)
         
         # Convert set to list for return
         tools_used = list(tools_used)
+        print("DEBUG: tools_used =", tools_used)  # Debug print
         
         self.logger.info(f"Tools used: {tools_used}")
         self.logger.info(f"Final response: {final_response}")
