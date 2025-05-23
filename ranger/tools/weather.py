@@ -9,6 +9,15 @@ from ranger.tools.maps import get_travel_duration
 
 @tool
 def get_weather(location: str) -> str:
+    """Get a detailed weather report for a specific location.
+
+    Args:
+        location: The city or location to get weather information for.
+
+    Returns:
+        A formatted string containing the weather report with temperature,
+        conditions, humidity, and wind speed.
+    """
     print(f"DEBUG: OpenAIServerModel in get_weather is {OpenAIServerModel!r}")
     print("DEBUG: About to instantiate OpenAIServerModel with model_id='gpt-4'")
     model_instance = OpenAIServerModel(model_id="gpt-4")
