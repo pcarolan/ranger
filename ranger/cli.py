@@ -8,6 +8,8 @@ from rich.console import Console
 from rich.prompt import Prompt
 from rich.panel import Panel
 from rich.text import Text
+from rich.spinner import Spinner
+from rich.live import Live
 from dotenv import load_dotenv
 import os
 import logging
@@ -16,14 +18,15 @@ from pathlib import Path
 from ranger.router import Router
 
 class CLI(object):
-    def __init__(self):
+    def __init__(self, debug: bool = False):
         self.console = Console()
+        self.debug = debug
         # Load environment variables from .env file
         load_dotenv()
         self.console.print("[dim]Loaded environment variables from .env[/dim]")
         
         # Initialize the router
-        self.router = Router()
+        self.router = Router(debug=debug)
         
         # Setup logging
         self._setup_logging()
@@ -46,6 +49,13 @@ class CLI(object):
                 # Removed StreamHandler to prevent console output
             ]
         )
+        
+        # Configure smolagents logger to only output to our log file
+        smolagents_logger = logging.getLogger('smolagents')
+        smolagents_logger.setLevel(logging.INFO)
+        smolagents_logger.addHandler(logging.FileHandler(log_file))
+        smolagents_logger.propagate = False  # Prevent propagation to root logger
+        
         self.logger = logging.getLogger(__name__)
         self.logger.info("="*50)  # Add a separator for new sessions
         self.logger.info("Ranger CLI started")
@@ -54,6 +64,7 @@ class CLI(object):
         return Prompt.ask(prompt)
 
     def repl(self):
+        """Start the Ranger REPL"""
         self.console.print(Panel.fit(
             "[bold green]Welcome to Ranger![/bold green]\n"
             "[dim]Type 'exit' or 'quit' to leave.[/dim]",
@@ -72,11 +83,24 @@ class CLI(object):
                 # Log the user input
                 self.logger.info(f"User query: {user_input}")
                 
-                # Route the query and get the response
-                response = self.router.route(user_input)
+                # Show spinner while processing
+                spinner = Spinner("dots", text="Thinking...", style="bold green")
+                with Live(spinner, refresh_per_second=10) as live:
+                    # Route the query and get the response
+                    response, thoughts = self.router.route(user_input)
                 
                 # Log the response
                 self.logger.info(f"Response: {response}")
+                
+                # If debug mode is enabled, show the thoughts
+                if self.debug and thoughts:
+                    self.console.print(
+                        Panel(
+                            Text(thoughts, style="dim"),
+                            title="[bold]System Thinking[/bold]",
+                            border_style="dim"
+                        )
+                    )
                 
                 # Display the response in a complementary color scheme
                 self.console.print(
@@ -105,7 +129,11 @@ class CLI(object):
                 )
 
 def main():
-    CLI().repl()
+    """Start the Ranger CLI"""
+    cli = CLI()
+    cli.repl()
 
 if __name__ == "__main__":
-    main()
+    fire.Fire({
+        'repl': lambda debug=False: CLI(debug=debug).repl()
+    })
