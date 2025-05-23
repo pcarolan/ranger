@@ -6,7 +6,7 @@ import logging
 import sys
 import io
 from contextlib import contextmanager
-from .weather import get_weather, get_travel_duration
+from .tools.weather import get_weather, get_travel_duration
 
 class Router:
     def __init__(self, debug: bool = False):
@@ -31,7 +31,7 @@ class Router:
         else:
             yield
 
-    def route(self, query: str) -> Tuple[str, str]:
+    def route(self, query: str) -> Tuple[str, str, List[str]]:
         """Route the query to the appropriate handler using the agent"""
         self.logger.info(f"Processing query: {query}")
         self.logger.info("Agent thinking process:")
@@ -46,6 +46,9 @@ class Router:
         
         Format your response in a clear, user-friendly way.
         
+        IMPORTANT: When using a tool, you MUST start your thought with "Thought: Using tool: [tool_name]"
+        For example: "Thought: Using tool: get_weather"
+        
         Show your thinking process by starting each thought with "Thought:".
         """
         
@@ -58,15 +61,26 @@ class Router:
         lines = response.splitlines()
         thoughts = []
         final_lines = []
+        tools_used = set()  # Use a set to avoid duplicates
+        
         for line in lines:
             if line.strip().startswith("Thought:"):
                 thoughts.append(line.strip())
                 self.logger.info(line.strip())
+                # Track tools used
+                if "using tool:" in line.lower():
+                    tool_name = line.split("using tool:")[-1].strip()
+                    tools_used.add(tool_name)
+                    self.logger.info(f"Found tool used: {tool_name}")
             elif line.strip():
                 final_lines.append(line)
         
         final_response = "\n".join(final_lines).strip()
         thoughts_text = "\n".join(thoughts)
         
+        # Convert set to list for return
+        tools_used = list(tools_used)
+        
+        self.logger.info(f"Tools used: {tools_used}")
         self.logger.info(f"Final response: {final_response}")
-        return final_response, thoughts_text 
+        return final_response, thoughts_text, tools_used 

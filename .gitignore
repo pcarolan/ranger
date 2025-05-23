@@ -10,4 +10,4 @@ wheels/
 .venv
 
 # Logs
-logs/
+ranger.log

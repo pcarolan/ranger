@@ -90,7 +90,7 @@ class CLI(object):
                 spinner = Spinner("dots", text="Thinking...", style="bold green")
                 with Live(spinner, refresh_per_second=10) as live:
                     # Route the query and get the response
-                    response, thoughts = self.router.route(user_input)
+                    response, thoughts, tools_used = self.router.route(user_input)
                 
                 # Log the response
                 self.logger.info(f"Response: {response}")
@@ -106,9 +106,10 @@ class CLI(object):
                     )
                 
                 # Display the response in a complementary color scheme
+                tools_text = f"\n\n[gray]Tools used: {', '.join(tools_used)}[/gray]" if tools_used else ""
                 self.console.print(
                     Panel(
-                        Text(response, style="magenta"),
+                        Text(response + tools_text, style="magenta"),
                         title="[bold]Response[/bold]",
                         border_style="magenta"
                     )

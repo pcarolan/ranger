@@ -1,10 +1,9 @@
 """
-This module is used to get the weather data for a given location.
+This module provides travel duration functionality using Google Maps.
 """
 
 from typing import Optional
-from smolagents import CodeAgent, tool
-from smolagents.models import OpenAIServerModel
+from smolagents import tool
 
 @tool
 def get_travel_duration(start_location: str, destination_location: str, transportation_mode: Optional[str] = None) -> str:
@@ -35,29 +34,4 @@ def get_travel_duration(start_location: str, destination_location: str, transpor
         return directions_result[0]["legs"][0]["duration"]["text"]
     except Exception as e:
         print(e)
-        return str(e)
-
-@tool
-def get_weather(location: str) -> str:
-    """Gets the weather for a given location using OpenAI to generate a realistic weather response.
-
-    Args:
-        location: the location for which you want to get the weather
-    """
-    agent = CodeAgent(
-        tools=[],
-        model=OpenAIServerModel(model_id="gpt-4"),
-        additional_authorized_imports=["datetime"]
-    )
-    
-    response = agent.run(f"""
-    Generate a realistic weather report for {location}. Include:
-    - Temperature in Fahrenheit
-    - Weather conditions (sunny, cloudy, rainy, etc.)
-    - Humidity percentage
-    - Wind speed in miles/hour
-    
-    Format the response in a clear, bullet-point style.
-    """)
-    
-    return response
+        return str(e) 
