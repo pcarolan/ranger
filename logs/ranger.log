@@ -1,0 +1,118 @@
+2025-05-23 10:58:12,078 - INFO - ==================================================
+2025-05-23 10:58:12,078 - INFO - Ranger CLI started
+2025-05-23 10:58:12,092 - INFO - ==================================================
+2025-05-23 10:58:12,092 - INFO - Ranger CLI started
+2025-05-23 10:58:31,547 - INFO - User query: weather 49770
+2025-05-23 10:58:34,705 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-23 10:58:39,288 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-23 10:58:52,798 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-23 10:58:56,278 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-23 10:58:59,787 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-23 10:59:05,399 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-23 10:59:09,937 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-23 10:59:09,946 - INFO - Response: The weather at 49770 is as follows:
+Temperature: 34.5 F
+Weather conditions: Cloudy
+Humidity: 58%
+Wind speed: 7.5 km/h
+2025-05-23 10:59:38,364 - INFO - User interrupted with KeyboardInterrupt
+2025-05-23 11:00:15,077 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:00:15,077 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:00:15,091 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:00:15,091 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:00:25,373 - INFO - User query: weather petoskey, mi - /Users/pc/ranger/ranger/cli.py:86
+2025-05-23 11:00:31,102 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:00:41,752 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:00:45,864 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:00:50,146 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:00:50,150 - INFO - Response: The current weather condition in Petoskey, MI is as follows:
+Temperature: 73°F
+Weather Condition: Rainy
+Humidity: 91%
+Wind Speed: 19 km/h - /Users/pc/ranger/ranger/cli.py:92
+2025-05-23 11:01:33,672 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:103
+2025-05-23 11:02:17,240 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:02:17,240 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:02:17,254 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:02:17,254 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:02:34,384 - INFO - User query: weather 49770 - /Users/pc/ranger/ranger/cli.py:86
+2025-05-23 11:02:37,876 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:02:39,305 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:02:54,983 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:03:04,586 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:03:11,867 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:03:16,119 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:03:20,109 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:03:23,539 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:03:24,466 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:03:26,984 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:03:30,707 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:03:30,713 - INFO - Response: The temperature at postal code 49770 is -17.7°F. The current weather conditions are rainy with a humidity of 23% and wind speed is 131.1 miles per hour. - /Users/pc/ranger/ranger/cli.py:92
+2025-05-23 11:03:57,750 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:03:57,750 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:03:57,764 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:03:57,764 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:04:12,771 - INFO - User query: weather chicago, il - /Users/pc/ranger/ranger/cli.py:86
+2025-05-23 11:04:12,772 - INFO - Processing query: weather chicago, il - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:04:12,772 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:22
+2025-05-23 11:04:12,772 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:23
+2025-05-23 11:04:12,772 - ERROR - Error occurred: 'CodeAgent' object has no attribute 'add_callback' - /Users/pc/ranger/ranger/cli.py:111
+Traceback (most recent call last):
+  File "/Users/pc/ranger/ranger/cli.py", line 89, in repl
+    response = self.router.route(user_input)
+  File "/Users/pc/ranger/ranger/router.py", line 30, in route
+    self.agent.add_callback("thought", log_thought)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CodeAgent' object has no attribute 'add_callback'
+2025-05-23 11:04:25,634 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:103
+2025-05-23 11:04:39,749 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:04:39,749 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:04:39,763 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:04:39,763 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:04:45,820 - INFO - User query: weather chicago, il - /Users/pc/ranger/ranger/cli.py:86
+2025-05-23 11:04:45,821 - INFO - Processing query: weather chicago, il - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:04:45,821 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:22
+2025-05-23 11:04:45,821 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:23
+2025-05-23 11:04:50,789 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:04:55,865 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:05:10,048 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:05:15,039 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:05:25,592 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:05:25,603 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:43
+2025-05-23 11:05:25,603 - INFO - Final response: The current weather in Chicago, IL is: - Temperature: 11 °F
+- Weather conditions: snowy
+- Humidity: 19 %
+- Wind speed: 1 mph - /Users/pc/ranger/ranger/router.py:44
+2025-05-23 11:05:25,603 - INFO - Response: The current weather in Chicago, IL is: - Temperature: 11 °F
+- Weather conditions: snowy
+- Humidity: 19 %
+- Wind speed: 1 mph - /Users/pc/ranger/ranger/cli.py:92
+2025-05-23 11:05:33,406 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:103
+2025-05-23 11:06:43,175 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:06:43,175 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:06:43,188 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:06:43,188 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:06:49,882 - INFO - User query: weather chicago, il - /Users/pc/ranger/ranger/cli.py:86
+2025-05-23 11:06:49,882 - INFO - Processing query: weather chicago, il - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:06:49,883 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:06:49,883 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:06:56,946 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:07:02,630 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:07:08,221 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:07:20,079 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:07:27,477 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:07:30,529 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:07:38,406 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:07:38,412 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:35
+2025-05-23 11:07:38,412 - INFO - Final response: The current weather in Chicago, IL is as follows:
+Temperature: 35.6 F
+Conditions: Cloudy
+Humidity: 46%
+Wind: 15 mph - /Users/pc/ranger/ranger/router.py:45
+2025-05-23 11:07:38,413 - INFO - Response: The current weather in Chicago, IL is as follows:
+Temperature: 35.6 F
+Conditions: Cloudy
+Humidity: 46%
+Wind: 15 mph - /Users/pc/ranger/ranger/cli.py:92
+2025-05-23 11:07:42,294 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:103
+2025-05-23 11:08:06,329 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:103

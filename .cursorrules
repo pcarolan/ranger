@@ -11,6 +11,6 @@
 - Use fire as the cli and implement using fire best practices
 
 ## Shortcuts
-- 'kk' - yes, please!
-- 'nah' - no, thank you
+- 'k' - yes, please!
+- 'n' - no, thank you
 - '?' - why doesn't this work? please explain.

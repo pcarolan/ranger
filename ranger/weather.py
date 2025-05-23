@@ -55,7 +55,7 @@ def get_weather(location: str) -> str:
     - Temperature in Fahrenheit
     - Weather conditions (sunny, cloudy, rainy, etc.)
     - Humidity percentage
-    - Wind speed in km/h
+    - Wind speed in miles/hour
     
     Format the response in a clear, bullet-point style.
     """)
