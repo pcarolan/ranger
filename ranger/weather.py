@@ -52,7 +52,7 @@ def get_weather(location: str) -> str:
     
     response = agent.run(f"""
     Generate a realistic weather report for {location}. Include:
-    - Temperature in Celsius
+    - Temperature in Fahrenheit
     - Weather conditions (sunny, cloudy, rainy, etc.)
     - Humidity percentage
     - Wind speed in km/h
