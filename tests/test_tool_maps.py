@@ -4,6 +4,11 @@ import importlib
 import sys
 from datetime import datetime
 
+# Mock smolagents before importing maps
+smolagents_mock = MagicMock()
+smolagents_mock.tool = lambda f: f
+sys.modules['smolagents'] = smolagents_mock
+
 def test_travel_duration_success():
     """Test successful travel duration retrieval"""
     mock_gmaps = MagicMock()
@@ -23,7 +28,7 @@ def test_travel_duration_success():
             "driving"
         )
     
-    assert "1 hour 30 mins" in result
+    assert result == "1 hour 30 mins"
     mock_gmaps.directions.assert_called_once_with(
         "New York, NY",
         "Boston, MA",
@@ -46,7 +51,7 @@ def test_travel_duration_no_route():
             "driving"
         )
     
-    assert "No way found between these places" in result
+    assert result == "No way found between these places with the required transportation mode."
 
 def test_travel_duration_api_error():
     """Test handling of API errors"""
@@ -63,7 +68,7 @@ def test_travel_duration_api_error():
             "driving"
         )
     
-    assert "API Error" in result
+    assert result == "API Error"
 
 def test_travel_duration_default_mode():
     """Test default transportation mode is driving"""
@@ -83,6 +88,7 @@ def test_travel_duration_default_mode():
             "Boston, MA"
         )
     
+    assert result == "1 hour 30 mins"
     mock_gmaps.directions.assert_called_once_with(
         "New York, NY",
         "Boston, MA",
