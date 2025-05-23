@@ -3,7 +3,8 @@ This module is used to get the weather data for a given location.
 """
 
 from typing import Optional
-from smolagents import CodeAgent, tool, OpenAIModel
+from smolagents import CodeAgent, tool
+from smolagents.models import OpenAIServerModel
 
 @tool
 def get_travel_duration(start_location: str, destination_location: str, transportation_mode: Optional[str] = None) -> str:
@@ -34,17 +35,29 @@ def get_travel_duration(start_location: str, destination_location: str, transpor
         return directions_result[0]["legs"][0]["duration"]["text"]
     except Exception as e:
         print(e)
-        return e
+        return str(e)
 
-@classmethod
+@tool
 def get_weather(location: str) -> str:
-    """Gets the weather for a given location. It uses the OpenAI API to get the weather data.   
+    """Gets the weather for a given location using OpenAI to generate a realistic weather response.
 
     Args:
         location: the location for which you want to get the weather
     """
-    return "The weather in Paris is sunny."
-
-# agent = CodeAgent(tools=[get_travel_duration, get_weather], model=OpenAIModel(model="gpt-4o-mini"), additional_authorized_imports=["datetime"])
-
-# agent.run("What is the weather in Paris today? And what is the travel time from Paris to Lyon?")
+    agent = CodeAgent(
+        tools=[],
+        model=OpenAIServerModel(model_id="gpt-4"),
+        additional_authorized_imports=["datetime"]
+    )
+    
+    response = agent.run(f"""
+    Generate a realistic weather report for {location}. Include:
+    - Temperature in Celsius
+    - Weather conditions (sunny, cloudy, rainy, etc.)
+    - Humidity percentage
+    - Wind speed in km/h
+    
+    Format the response in a clear, bullet-point style.
+    """)
+    
+    return response

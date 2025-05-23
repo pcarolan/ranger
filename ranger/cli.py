@@ -8,10 +8,19 @@ from rich.console import Console
 from rich.prompt import Prompt
 from rich.panel import Panel
 from rich.text import Text
+from dotenv import load_dotenv
+import os
+from ranger.router import Router
 
 class CLI(object):
     def __init__(self):
         self.console = Console()
+        # Load environment variables from .env file
+        load_dotenv()
+        self.console.print("[dim]Loaded environment variables from .env[/dim]")
+        
+        # Initialize the router
+        self.router = Router()
 
     def input(self, prompt: str) -> str:
         return Prompt.ask(prompt)
@@ -31,11 +40,14 @@ class CLI(object):
                     self.console.print("[yellow]Goodbye! 👋[/yellow]")
                     break
                 
-                # Echo the input with a complementary color scheme
+                # Route the query and get the response
+                response = self.router.route(user_input)
+                
+                # Display the response in a complementary color scheme
                 self.console.print(
                     Panel(
-                        Text(user_input, style="magenta"),
-                        title="[bold]Output[/bold]",
+                        Text(response, style="magenta"),
+                        title="[bold]Response[/bold]",
                         border_style="magenta"
                     )
                 )
