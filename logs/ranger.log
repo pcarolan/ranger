@@ -116,3 +116,48 @@ Humidity: 46%
 Wind: 15 mph - /Users/pc/ranger/ranger/cli.py:92
 2025-05-23 11:07:42,294 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:103
 2025-05-23 11:08:06,329 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:103
+2025-05-23 11:08:28,633 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:08:28,633 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:08:28,647 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:08:28,647 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:08:32,544 - INFO - User query: weather 49770 - /Users/pc/ranger/ranger/cli.py:86
+2025-05-23 11:08:32,545 - INFO - Processing query: weather 49770 - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:08:32,545 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:08:32,545 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:08:36,269 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:08:37,607 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:08:40,277 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:08:43,335 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:08:51,837 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:08:59,006 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:09:01,270 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:09:04,208 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:09:04,216 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:35
+2025-05-23 11:09:04,216 - ERROR - Error occurred: 'dict' object has no attribute 'splitlines' - /Users/pc/ranger/ranger/cli.py:111
+Traceback (most recent call last):
+  File "/Users/pc/ranger/ranger/cli.py", line 89, in repl
+    response = self.router.route(user_input)
+  File "/Users/pc/ranger/ranger/router.py", line 37, in route
+    # your code here
+AttributeError: 'dict' object has no attribute 'splitlines'
+2025-05-23 11:09:20,411 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:103
+2025-05-23 11:09:27,710 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:09:27,710 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:09:27,723 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:09:27,723 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:09:41,177 - INFO - User query: weather miami - /Users/pc/ranger/ranger/cli.py:86
+2025-05-23 11:09:41,177 - INFO - Processing query: weather miami - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:09:41,178 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:09:41,178 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:09:45,048 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:09:47,966 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:09:52,365 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:09:56,959 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:10:02,096 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:10:07,008 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:10:12,331 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:10:17,861 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:10:22,595 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:10:22,602 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:43
+2025-05-23 11:10:22,603 - INFO - Final response: The weather in Miami is currently sunny with a temperature of 74.66°F. There is a humidity of 66% and the wind speed is approximately 14.96 miles/hour. - /Users/pc/ranger/ranger/router.py:53
+2025-05-23 11:10:22,603 - INFO - Response: The weather in Miami is currently sunny with a temperature of 74.66°F. There is a humidity of 66% and the wind speed is approximately 14.96 miles/hour. - /Users/pc/ranger/ranger/cli.py:92
