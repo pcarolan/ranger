@@ -37,26 +37,13 @@ class CLI(object):
         # Use a single log file
         log_file = log_dir / "ranger.log"
         
-        # Configure logging with Apache format
-        # Format: %h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"
-        # Where:
-        # %h = remote host
-        # %l = remote logname
-        # %u = remote user
-        # %t = time of request
-        # %r = first line of request
-        # %>s = status
-        # %b = response length
-        # %{Referer}i = referer
-        # %{User-Agent}i = user agent
-        apache_format = '%(asctime)s - %(levelname)s - %(message)s - %(pathname)s:%(lineno)d'
-        
+        # Configure logging to only output to the log file
         logging.basicConfig(
             level=logging.INFO,
-            format=apache_format,
+            format='%(asctime)s - %(levelname)s - %(message)s - %(pathname)s:%(lineno)d',
             handlers=[
-                logging.FileHandler(log_file, mode='a'),  # Append mode
-                logging.StreamHandler()
+                logging.FileHandler(log_file),
+                # Removed StreamHandler to prevent console output
             ]
         )
         self.logger = logging.getLogger(__name__)

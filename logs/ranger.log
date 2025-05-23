@@ -161,3 +161,334 @@ AttributeError: 'dict' object has no attribute 'splitlines'
 2025-05-23 11:10:22,602 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:43
 2025-05-23 11:10:22,603 - INFO - Final response: The weather in Miami is currently sunny with a temperature of 74.66°F. There is a humidity of 66% and the wind speed is approximately 14.96 miles/hour. - /Users/pc/ranger/ranger/router.py:53
 2025-05-23 11:10:22,603 - INFO - Response: The weather in Miami is currently sunny with a temperature of 74.66°F. There is a humidity of 66% and the wind speed is approximately 14.96 miles/hour. - /Users/pc/ranger/ranger/cli.py:92
+2025-05-23 11:12:26,880 - INFO - User exited the REPL - /Users/pc/ranger/ranger/cli.py:81
+2025-05-23 11:12:28,959 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:12:28,959 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:12:28,973 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 11:12:28,973 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 11:12:30,592 - INFO - User query: weather - /Users/pc/ranger/ranger/cli.py:86
+2025-05-23 11:12:30,593 - INFO - Processing query: weather - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:12:30,593 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:12:30,593 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:12:33,367 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:12:41,173 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:12:43,678 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:12:50,335 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:12:50,342 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:34
+2025-05-23 11:12:50,343 - INFO - Final response: The current weather is sunny with a temperature of 75.2°F. The humidity is at 40% and the wind is blowing at a speed of 5.6 miles/hour. - /Users/pc/ranger/ranger/router.py:44
+2025-05-23 11:12:50,343 - INFO - Response: The current weather is sunny with a temperature of 75.2°F. The humidity is at 40% and the wind is blowing at a speed of 5.6 miles/hour. - /Users/pc/ranger/ranger/cli.py:92
+2025-05-23 11:13:25,981 - INFO - User query: directions from petoskey, mi to traverse city, mi and weather - /Users/pc/ranger/ranger/cli.py:86
+2025-05-23 11:13:25,981 - INFO - Processing query: directions from petoskey, mi to traverse city, mi and weather - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:13:25,982 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:13:25,982 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:13:29,677 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:13:35,059 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:13:35,068 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:13:39,865 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:13:48,501 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:13:58,126 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:14:27,208 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:14:43,076 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:14:59,189 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:15:12,332 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:15:25,188 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:15:40,589 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:15:55,729 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:15:55,904 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:04,614 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:08,083 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:12,612 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:27,112 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:29,237 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:32,033 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:36,525 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:43,762 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:49,142 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:51,297 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:56,236 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:16:56,243 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:34
+2025-05-23 11:16:56,244 - INFO - Final response: It takes approximately 1 hour 23 mins to travel from Petoskey, MI to Traverse City, MI by car. 
+The weather in Petoskey, MI is currently:
+* Temperature: 50°F
+* Weather Conditions: Partly cloudy
+* Humidity: 74%
+* Wind Speed: 8 mph
+The weather in Traverse City, MI is currently:
+Weather report for Traverse City, MI:
+    - Temperature: 72°F
+    - Weather conditions: Sunny
+    - Humidity: 40%
+    - Wind speed: 5 mph - /Users/pc/ranger/ranger/router.py:44
+2025-05-23 11:16:56,244 - INFO - Response: It takes approximately 1 hour 23 mins to travel from Petoskey, MI to Traverse City, MI by car. 
+The weather in Petoskey, MI is currently:
+* Temperature: 50°F
+* Weather Conditions: Partly cloudy
+* Humidity: 74%
+* Wind Speed: 8 mph
+The weather in Traverse City, MI is currently:
+Weather report for Traverse City, MI:
+    - Temperature: 72°F
+    - Weather conditions: Sunny
+    - Humidity: 40%
+    - Wind speed: 5 mph - /Users/pc/ranger/ranger/cli.py:92
+2025-05-23 11:17:13,654 - INFO - User query: Can you give me a nice one-day trip around Paris with a few locations and the times? Could be in the city or outside, but should fit in one day. I'm travelling only with a rented bicycle. - /Users/pc/ranger/ranger/cli.py:86
+2025-05-23 11:17:13,654 - INFO - Processing query: Can you give me a nice one-day trip around Paris with a few locations and the times? Could be in the city or outside, but should fit in one day. I'm travelling only with a rented bicycle. - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:17:13,654 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:17:13,654 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:17:29,273 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:17:29,280 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:17:29,577 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:17:29,832 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:17:41,402 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:17:58,879 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:17:58,894 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:18:10,599 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:18:10,615 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:34
+2025-05-23 11:18:10,615 - INFO - Final response: Here is your one-day bicycling trip around Paris:
+- Start your journey at the Eiffel Tower at 09:00 AM.
+- Arrive at the Notre-Dame Cathedral at 10:26 AM. Spend time exploring until approximately 11:26 AM.
+- Arrive at the Louvre Museum at 11:55 AM. Spend time exploring until approximately 12:55 PM.
+- Arrive at the Cordeliers – Panthéon at 01:23 PM. Spend time exploring until approximately 02:53 PM.
+Have a great trip! - /Users/pc/ranger/ranger/router.py:44
+2025-05-23 11:18:10,615 - INFO - Response: Here is your one-day bicycling trip around Paris:
+- Start your journey at the Eiffel Tower at 09:00 AM.
+- Arrive at the Notre-Dame Cathedral at 10:26 AM. Spend time exploring until approximately 11:26 AM.
+- Arrive at the Louvre Museum at 11:55 AM. Spend time exploring until approximately 12:55 PM.
+- Arrive at the Cordeliers – Panthéon at 01:23 PM. Spend time exploring until approximately 02:53 PM.
+Have a great trip! - /Users/pc/ranger/ranger/cli.py:92
+2025-05-23 11:18:28,352 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:103
+2025-05-23 11:18:30,705 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:50
+2025-05-23 11:18:30,705 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:51
+2025-05-23 11:18:30,718 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:50
+2025-05-23 11:18:30,718 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:51
+2025-05-23 11:18:43,467 - INFO - User query: help me plan a trip from petoskey to chicago - /Users/pc/ranger/ranger/cli.py:73
+2025-05-23 11:18:43,467 - INFO - Processing query: help me plan a trip from petoskey to chicago - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:18:43,467 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:18:43,467 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:18:50,272 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:18:50,313 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:18:50,917 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:18:57,641 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:18:57,648 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:34
+2025-05-23 11:18:57,649 - INFO - Final response: The best way to travel from Petoskey to Chicago is by driving. The estimated travel time is approximately 5 hours 39 mins. Unfortunately, there is no available public transit route between these two locations. - /Users/pc/ranger/ranger/router.py:44
+2025-05-23 11:18:57,649 - INFO - Response: The best way to travel from Petoskey to Chicago is by driving. The estimated travel time is approximately 5 hours 39 mins. Unfortunately, there is no available public transit route between these two locations. - /Users/pc/ranger/ranger/cli.py:79
+2025-05-23 11:19:32,930 - INFO - User query: Can you give me a nice one-day trip around Paris with a few locations and the times? Could be in the city or outside, but should fit in one day. I'm travelling only with a rented bicycle. - /Users/pc/ranger/ranger/cli.py:73
+2025-05-23 11:19:32,930 - INFO - Processing query: Can you give me a nice one-day trip around Paris with a few locations and the times? Could be in the city or outside, but should fit in one day. I'm travelling only with a rented bicycle. - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:19:32,930 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:19:32,930 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:19:35,326 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:90
+2025-05-23 11:20:39,677 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:50
+2025-05-23 11:20:39,677 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:51
+2025-05-23 11:20:39,690 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:50
+2025-05-23 11:20:39,690 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:51
+2025-05-23 11:20:41,216 - INFO - User query: Can you give me a nice two-day trip around lake michigan with a few locations and times? Stop at interesting destinations. I'm travelling by car with bikes. - /Users/pc/ranger/ranger/cli.py:73
+2025-05-23 11:20:41,216 - INFO - Processing query: Can you give me a nice two-day trip around lake michigan with a few locations and times? Stop at interesting destinations. I'm travelling by car with bikes. - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:20:41,216 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:20:41,216 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:20:41,582 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:20:41,584 - INFO - Retrying request to /chat/completions in 0.428824 seconds - /Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/_base_client.py:1058
+2025-05-23 11:20:42,122 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:20:42,124 - INFO - Retrying request to /chat/completions in 0.858334 seconds - /Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/_base_client.py:1058
+2025-05-23 11:20:43,087 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:20:43,094 - ERROR - Error occurred: Error in generating model output:
+Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}} - /Users/pc/ranger/ranger/cli.py:98
+Traceback (most recent call last):
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 1333, in _step_stream
+    chat_message: ChatMessage = self.model.generate(
+                                ~~~~~~~~~~~~~~~~~~~^
+        input_messages,
+        ^^^^^^^^^^^^^^^
+        stop_sequences=["<end_code>", "Observation:", "Calling tools:"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **additional_args,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/models.py", line 1446, in generate
+    response = self.client.chat.completions.create(**completion_kwargs)
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/resources/chat/completions/completions.py", line 925, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<43 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/_base_client.py", line 1239, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/_base_client.py", line 1034, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/pc/ranger/ranger/cli.py", line 76, in repl
+    response = self.router.route(user_input)
+  File "/Users/pc/ranger/ranger/router.py", line 33, in route
+    response = self.agent.run(prompt)
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 351, in run
+    return list(self._run_stream(task=self.task, max_steps=max_steps, images=images))[-1].final_answer
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 379, in _run_stream
+    raise e
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 374, in _run_stream
+    for el in self._execute_step(action_step):
+              ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 397, in _execute_step
+    for el in self._step_stream(memory_step):
+              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 1354, in _step_stream
+    raise AgentGenerationError(f"Error in generating model output:\n{e}", self.logger) from e
+smolagents.utils.AgentGenerationError: Error in generating model output:
+Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-23 11:23:32,217 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:90
+2025-05-23 11:23:34,229 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:50
+2025-05-23 11:23:34,229 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:51
+2025-05-23 11:23:34,242 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:50
+2025-05-23 11:23:34,242 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:51
+2025-05-23 11:23:37,069 - INFO - User query: Can you give me a nice two-day trip around lake michigan with a few locations and times? Stop at interesting destinations. I'm travelling by car with bikes. - /Users/pc/ranger/ranger/cli.py:73
+2025-05-23 11:23:37,069 - INFO - Processing query: Can you give me a nice two-day trip around lake michigan with a few locations and times? Stop at interesting destinations. I'm travelling by car with bikes. - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:23:37,069 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:23:37,069 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:23:37,383 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:23:37,383 - INFO - Retrying request to /chat/completions in 0.379557 seconds - /Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/_base_client.py:1058
+2025-05-23 11:23:37,859 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:23:37,860 - INFO - Retrying request to /chat/completions in 0.819872 seconds - /Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/_base_client.py:1058
+2025-05-23 11:23:38,772 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:23:38,779 - ERROR - Error occurred: Error in generating model output:
+Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}} - /Users/pc/ranger/ranger/cli.py:98
+Traceback (most recent call last):
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 1333, in _step_stream
+    chat_message: ChatMessage = self.model.generate(
+                                ~~~~~~~~~~~~~~~~~~~^
+        input_messages,
+        ^^^^^^^^^^^^^^^
+        stop_sequences=["<end_code>", "Observation:", "Calling tools:"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **additional_args,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/models.py", line 1446, in generate
+    response = self.client.chat.completions.create(**completion_kwargs)
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/resources/chat/completions/completions.py", line 925, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<43 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/_base_client.py", line 1239, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/openai/_base_client.py", line 1034, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/pc/ranger/ranger/cli.py", line 76, in repl
+    response = self.router.route(user_input)
+  File "/Users/pc/ranger/ranger/router.py", line 33, in route
+    response = self.agent.run(prompt)
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 351, in run
+    return list(self._run_stream(task=self.task, max_steps=max_steps, images=images))[-1].final_answer
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 379, in _run_stream
+    raise e
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 374, in _run_stream
+    for el in self._execute_step(action_step):
+              ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 397, in _execute_step
+    for el in self._step_stream(memory_step):
+              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/pc/ranger/.venv/lib/python3.13/site-packages/smolagents/agents.py", line 1354, in _step_stream
+    raise AgentGenerationError(f"Error in generating model output:\n{e}", self.logger) from e
+smolagents.utils.AgentGenerationError: Error in generating model output:
+Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-23 11:26:17,494 - INFO - User query: Can you give me a nice day trip around Leelanau peninsula, michigan recommending points of interest locations and times? Stop at interesting destinations. I'm travelling by car with bikes. There will be 2 adults and 3 kids and a dog. - /Users/pc/ranger/ranger/cli.py:73
+2025-05-23 11:26:17,494 - INFO - Processing query: Can you give me a nice day trip around Leelanau peninsula, michigan recommending points of interest locations and times? Stop at interesting destinations. I'm travelling by car with bikes. There will be 2 adults and 3 kids and a dog. - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:26:17,495 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:26:17,495 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:26:29,636 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:26:29,679 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:26:30,049 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:26:30,319 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:26:45,197 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:26:45,211 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:26:45,499 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:26:58,379 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:26:58,396 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:26:58,539 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:26:58,758 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 11:27:03,369 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:27:03,377 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:34
+2025-05-23 11:27:03,377 - ERROR - Error occurred: 'list' object has no attribute 'splitlines' - /Users/pc/ranger/ranger/cli.py:98
+Traceback (most recent call last):
+  File "/Users/pc/ranger/ranger/cli.py", line 76, in repl
+    response = self.router.route(user_input)
+  File "/Users/pc/ranger/ranger/router.py", line 36, in route
+    lines = response.splitlines()
+            ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'splitlines'
+2025-05-23 11:27:39,871 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:90
+2025-05-23 11:27:41,367 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:50
+2025-05-23 11:27:41,367 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:51
+2025-05-23 11:27:41,380 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:50
+2025-05-23 11:27:41,380 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:51
+2025-05-23 11:28:30,451 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:90
+2025-05-23 11:28:34,391 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:50
+2025-05-23 11:28:34,391 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:51
+2025-05-23 11:28:34,404 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:50
+2025-05-23 11:28:34,404 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:51
+2025-05-23 11:28:36,500 - INFO - User query: Can you give me a nice day trip around Leelanau peninsula michigan recommending points of interest locations and times? Stop at interesting destinations, lunch and dinner. I'm travelling by car. There will be 2 adults and 3 kids and a dog. - /Users/pc/ranger/ranger/cli.py:73
+2025-05-23 11:28:36,500 - INFO - Processing query: Can you give me a nice day trip around Leelanau peninsula michigan recommending points of interest locations and times? Stop at interesting destinations, lunch and dinner. I'm travelling by car. There will be 2 adults and 3 kids and a dog. - /Users/pc/ranger/ranger/router.py:19
+2025-05-23 11:28:36,500 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:20
+2025-05-23 11:28:36,500 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:21
+2025-05-23 11:28:44,134 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:28:48,048 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:28:50,072 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:28:56,934 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:29:03,130 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:29:05,118 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:29:06,664 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:29:30,091 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 11:29:30,095 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:35
+2025-05-23 11:29:30,095 - INFO - Final response: Here is a suggestion for a nice day trip around the Leelanau Peninsula, Michigan:
+Morning: 
+- Start in Traverse City, which is the largest city near the Leelanau Peninsula. There are plenty of parks where you can take a walk, such as the Traverse City State Park. 
+- Afterward, you can head north toward Suttons Bay. On the way, you might choose to stop at the Grand Traverse Lighthouse Museum - it's a historic location with beautiful views. Please make sure if it allows dogs on the premises.
+Lunch: 
+- Arrive at Suttons Bay by lunchtime. The town has a number of dog-friendly restaurants with outdoor seating, such as Martha's Leelanau Table or Boone's Prime Time Pub. 
+Afternoon: 
+- After lunch, take a drive along M-22 heading towards Northport. This scenic highway offers amazing views of the lakes and woods. Do stop at Peterson Park - it has wonderful lookout points over Lake Michigan and Beaver Island.
+- You can then head south to Leland. Spend time in the Historic Fishtown, where kids can enjoy watching the fish and you can enjoy shopping. 
+Dinner: 
+- Finish your day in Leland. The Bluebird Restaurant and Tavern is a popular spot that offers a variety of dishes and has options for different age groups.
+Do keep an eye on the weather as the conditions are a mix of sunny and rainy. Also, wind speeds of around 10 miles/hour will account for a cool breeze.
+NOTE: Due to the dynamic nature of businesses (like restaurants), the availability/opening hours may change. Please cross verify before the visit using appropriate services. Also, exact trip duration and routes will be best provided in real-time by a dedicated navigation service. - /Users/pc/ranger/ranger/router.py:45
+2025-05-23 11:29:30,095 - INFO - Response: Here is a suggestion for a nice day trip around the Leelanau Peninsula, Michigan:
+Morning: 
+- Start in Traverse City, which is the largest city near the Leelanau Peninsula. There are plenty of parks where you can take a walk, such as the Traverse City State Park. 
+- Afterward, you can head north toward Suttons Bay. On the way, you might choose to stop at the Grand Traverse Lighthouse Museum - it's a historic location with beautiful views. Please make sure if it allows dogs on the premises.
+Lunch: 
+- Arrive at Suttons Bay by lunchtime. The town has a number of dog-friendly restaurants with outdoor seating, such as Martha's Leelanau Table or Boone's Prime Time Pub. 
+Afternoon: 
+- After lunch, take a drive along M-22 heading towards Northport. This scenic highway offers amazing views of the lakes and woods. Do stop at Peterson Park - it has wonderful lookout points over Lake Michigan and Beaver Island.
+- You can then head south to Leland. Spend time in the Historic Fishtown, where kids can enjoy watching the fish and you can enjoy shopping. 
+Dinner: 
+- Finish your day in Leland. The Bluebird Restaurant and Tavern is a popular spot that offers a variety of dishes and has options for different age groups.
+Do keep an eye on the weather as the conditions are a mix of sunny and rainy. Also, wind speeds of around 10 miles/hour will account for a cool breeze.
+NOTE: Due to the dynamic nature of businesses (like restaurants), the availability/opening hours may change. Please cross verify before the visit using appropriate services. Also, exact trip duration and routes will be best provided in real-time by a dedicated navigation service. - /Users/pc/ranger/ranger/cli.py:79

@@ -29,15 +29,7 @@ class Router:
         
         Format your response in a clear, user-friendly way.
         
-        Show your thinking process by starting each thought with \"Thought:\".
-        When you output code, always use this format:
-        Thoughts: <your thoughts>
-        Code:
-        ```py
-        # your code here
-        ```
-        <end_code>
-        Always include the <end_code> marker after your code block.
+        Show your thinking process by starting each thought with "Thought:".
         """
         response = self.agent.run(prompt)
         self.logger.info("-" * 50)
