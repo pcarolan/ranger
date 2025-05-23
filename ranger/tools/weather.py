@@ -6,6 +6,7 @@ from typing import Optional
 from smolagents import CodeAgent, tool
 from smolagents.models import OpenAIServerModel
 from ranger.tools.maps import get_travel_duration
+import logging
 
 @tool
 def get_weather(location: str) -> str:
@@ -16,10 +17,11 @@ def get_weather(location: str) -> str:
                  Can be a city name, coordinates, or landmark.
                  Examples: "New York", "Paris, France", "Mount Everest"
     """
-    print(f"DEBUG: OpenAIServerModel in get_weather is {OpenAIServerModel!r}")
-    print("DEBUG: About to instantiate OpenAIServerModel with model_id='gpt-4'")
+    logger = logging.getLogger(__name__)
+    logger.debug("OpenAIServerModel in get_weather is %r", OpenAIServerModel)
+    logger.debug("About to instantiate OpenAIServerModel with model_id='gpt-4'")
     model_instance = OpenAIServerModel(model_id="gpt-4")
-    print(f"DEBUG: Instantiated OpenAIServerModel, got {model_instance!r}")
+    logger.debug("Instantiated OpenAIServerModel, got %r", model_instance)
     agent = CodeAgent(
         tools=[],
         model=model_instance,

@@ -4,6 +4,7 @@ This module provides travel duration functionality using Google Maps.
 
 from typing import Optional
 from smolagents import tool
+import logging
 
 @tool
 def get_travel_duration(start_location: str, destination_location: str, transportation_mode: Optional[str] = None) -> str:
@@ -33,5 +34,6 @@ def get_travel_duration(start_location: str, destination_location: str, transpor
             return "No way found between these places with the required transportation mode."
         return directions_result[0]["legs"][0]["duration"]["text"]
     except Exception as e:
-        print(e)
+        logger = logging.getLogger(__name__)
+        logger.error("Error getting travel duration: %s", str(e))
         return str(e) 

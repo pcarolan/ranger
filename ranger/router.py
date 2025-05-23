@@ -58,15 +58,21 @@ class Router:
         
         self.logger.info("-" * 50)
         
-        # Split and separate thoughts from final answer
-        lines = response.splitlines()
-        print("DEBUG: lines =", lines)  # Debug print
-        thoughts = []
+        # Process the response to extract tool calls
+        response = response.strip()
+        self.logger.debug("raw response = %s", response)
+        
+        # Split into lines and process each line
+        lines = response.split('\n')
+        self.logger.debug("lines = %s", lines)
+        
         final_lines = []
-        tools_used = set()  # Use a set to avoid duplicates
+        tools_used = []
+        thoughts = []
         
         for line in lines:
-            print("DEBUG: processing line =", line)  # Debug print
+            self.logger.debug("processing line = %s", line)
+            
             if line.strip().startswith("Thought:"):
                 thoughts.append(line.strip())
                 self.logger.info(line.strip())
@@ -74,21 +80,19 @@ class Router:
                 if "using tool:" in line.lower():
                     # Extract just the tool name after "using tool:"
                     tool_name = line.lower().split("using tool:")[-1].strip()
-                    print("DEBUG: extracted tool_name =", tool_name)  # Debug print
-                    tools_used.add(tool_name)
-                    self.logger.info(f"Found tool used: {tool_name}")
-            elif line.strip():
-                print("DEBUG: adding to final_lines =", line)  # Debug print
+                    self.logger.debug("extracted tool_name = %s", tool_name)
+                    if tool_name not in tools_used:
+                        tools_used.append(tool_name)
+            else:
+                self.logger.debug("adding to final_lines = %s", line)
                 final_lines.append(line)
         
-        print("DEBUG: final_lines =", final_lines)  # Debug print
-        final_response = "\n".join(final_lines).strip()
-        print("DEBUG: final_response =", final_response)  # Debug print
-        thoughts_text = "\n".join(thoughts)
+        self.logger.debug("final_lines = %s", final_lines)
+        final_response = '\n'.join(final_lines)
+        self.logger.debug("final_response = %s", final_response)
         
-        # Convert set to list for return
-        tools_used = list(tools_used)
-        print("DEBUG: tools_used =", tools_used)  # Debug print
+        self.logger.debug("tools_used = %s", tools_used)
+        thoughts_text = '\n'.join(thoughts)
         
         self.logger.info(f"Tools used: {tools_used}")
         self.logger.info(f"Final response: {final_response}")
