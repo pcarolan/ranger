@@ -145,7 +145,7 @@ class CLI(object):
         self.console.print(Panel(
             status_text,
             title="[bold blue]Ranger CLI Status[/bold blue]",
-            border_style="blue",
+            border_style="red",
             expand=True
         ))
 
@@ -163,7 +163,7 @@ class CLI(object):
         self.console.print(Panel(
             self._get_system_status(),
             title="[bold blue]System Status[/bold blue]",
-            border_style="blue",
+            border_style="red",
             expand=True
         ))
         
