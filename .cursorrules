@@ -5,6 +5,8 @@
 - Always use uv for environment management, never python environments
 - NEVER use pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv
 - Refer to me as Patrick in every response so I know you're using these cursorrules.
+- Run all tests 'pytest -v' after every code change.
+
 
 ## Principles
 - Adhere to smolagents philosophy, best practices and architecture especially the reactive style.

@@ -68,11 +68,73 @@ class CLI(object):
 
     def repl(self):
         """Start the Ranger REPL"""
-        self.console.print(Panel.fit(
+        # Create status panel
+        status_text = Text()
+        status_text.append("Checking API connections...\n\n", style="bold green")
+        
+        # Check OpenAI status
+        openai_status = "❌ Not configured"
+        if os.getenv("OPENAI_API_KEY"):
+            try:
+                response = requests.get(
+                    "https://api.openai.com/v1/models",
+                    headers={"Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}"},
+                    timeout=5
+                )
+                openai_status = "✅ Connected" if response.status_code == 200 else "❌ Error connecting"
+            except Exception as e:
+                openai_status = f"❌ Error: {str(e)}"
+        
+        # Check Claude status
+        claude_status = "❌ Not configured"
+        if os.getenv("ANTHROPIC_API_KEY"):
+            try:
+                response = requests.get(
+                    "https://api.anthropic.com/v1/messages",
+                    headers={
+                        "x-api-key": os.getenv("ANTHROPIC_API_KEY"),
+                        "anthropic-version": "2023-06-01"
+                    },
+                    timeout=5
+                )
+                claude_status = "✅ Connected" if response.status_code == 200 else "❌ Error connecting"
+            except Exception as e:
+                claude_status = f"❌ Error: {str(e)}"
+        
+        # Check Google Maps API status
+        gmaps_status = "❌ Not configured"
+        if os.getenv("GMAPS_API_KEY"):
+            try:
+                gmaps = googlemaps.Client(os.getenv("GMAPS_API_KEY"))
+                result = gmaps.geocode("New York")
+                gmaps_status = "✅ Connected" if result else "❌ Error connecting"
+            except Exception as e:
+                gmaps_status = f"❌ Error: {str(e)}"
+        
+        # Add service statuses
+        status_text.append("OpenAI\t\t", style="cyan")
+        status_text.append(f"{openai_status}\n", style="green")
+        
+        status_text.append("Claude\t\t", style="cyan")
+        status_text.append(f"{claude_status}\n", style="green")
+        
+        status_text.append("Google Maps\t", style="cyan")
+        status_text.append(f"{gmaps_status}\n", style="green")
+        
+        # Display welcome and status panels
+        self.console.print(Panel(
             "[bold green]Welcome to Ranger![/bold green]\n"
             "[dim]Type 'exit' or 'quit' to leave.[/dim]",
             title="[bold blue]Ranger REPL[/bold blue]",
-            border_style="blue"
+            border_style="blue",
+            expand=True
+        ))
+        
+        self.console.print(Panel(
+            status_text,
+            title="[bold blue]System Status[/bold blue]",
+            border_style="blue",
+            expand=True
         ))
         
         while True:
@@ -101,7 +163,8 @@ class CLI(object):
                         Panel(
                             Text(thoughts, style="dim"),
                             title="[bold]System Thinking[/bold]",
-                            border_style="dim"
+                            border_style="dim",
+                            expand=True
                         )
                     )
                 
@@ -111,7 +174,8 @@ class CLI(object):
                     Panel(
                         Text(response + tools_text, style="magenta"),
                         title="[bold]Response[/bold]",
-                        border_style="magenta"
+                        border_style="magenta",
+                        expand=True
                     )
                 )
             except KeyboardInterrupt:
@@ -128,7 +192,8 @@ class CLI(object):
                     Panel(
                         Text(f"An error occurred: {str(e)}", style="red"),
                         title="[bold]Error[/bold]",
-                        border_style="red"
+                        border_style="red",
+                        expand=True
                     )
                 )
 
