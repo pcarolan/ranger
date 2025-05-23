@@ -184,3 +184,13 @@
 2025-05-23 13:14:08,520 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
 2025-05-23 13:14:08,520 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
 2025-05-23 13:14:09,048 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 13:14:37,003 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:14:37,003 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:14:37,017 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:14:37,017 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:14:37,444 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 13:14:52,038 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:14:52,038 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:14:52,051 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:14:52,051 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:14:57,389 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:117

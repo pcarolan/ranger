@@ -9,6 +9,7 @@
 ## Principles
 - Adhere to smolagents philosophy, best practices and architecture especially the reactive style.
 - Use fire as the cli and implement using fire best practices
+- favor extending existing files and frameworks rather than creating new ones
 
 ## Shortcuts
 - 'k' - yes, please!
