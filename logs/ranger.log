@@ -596,3 +596,7 @@ KeyError: "no spinner called 'thinking'"
     - Weather conditions: snowy
     - Humidity: 60%
     - Wind Speed: 6 mph - /Users/pc/ranger/ranger/cli.py:93
+2025-05-23 13:11:50,001 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:11:50,002 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:11:50,017 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:11:50,017 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64

@@ -2,6 +2,8 @@
 This is the main module for the ranger project.
 """
 
+__version__ = "0.1.0"
+
 from ranger.cli import CLI
 
 

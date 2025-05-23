@@ -10,12 +10,15 @@ from rich.panel import Panel
 from rich.text import Text
 from rich.spinner import Spinner
 from rich.live import Live
+from rich.table import Table
 from dotenv import load_dotenv
 import os
 import logging
 from datetime import datetime
 from pathlib import Path
-from router import Router
+from .router import Router
+import requests
+import googlemaps
 
 class CLI(object):
     def __init__(self, debug: bool = False):
@@ -128,12 +131,73 @@ class CLI(object):
                     )
                 )
 
+    def status(self):
+        """Show the status of the Ranger CLI"""
+        # Check OpenAI status
+        openai_status = "❌ Not configured"
+        if os.getenv("OPENAI_API_KEY"):
+            try:
+                response = requests.get(
+                    "https://api.openai.com/v1/models",
+                    headers={"Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}"},
+                    timeout=5
+                )
+                openai_status = "✅ Connected" if response.status_code == 200 else "❌ Error connecting"
+            except Exception as e:
+                openai_status = f"❌ Error: {str(e)}"
+
+        # Check Claude status
+        claude_status = "❌ Not configured"
+        if os.getenv("ANTHROPIC_API_KEY"):
+            try:
+                response = requests.get(
+                    "https://api.anthropic.com/v1/messages",
+                    headers={
+                        "x-api-key": os.getenv("ANTHROPIC_API_KEY"),
+                        "anthropic-version": "2023-06-01"
+                    },
+                    timeout=5
+                )
+                claude_status = "✅ Connected" if response.status_code == 200 else "❌ Error connecting"
+            except Exception as e:
+                claude_status = f"❌ Error: {str(e)}"
+
+        # Check Google Maps API status
+        gmaps_status = "❌ Not configured"
+        if os.getenv("GMAPS_API_KEY"):
+            try:
+                gmaps = googlemaps.Client(os.getenv("GMAPS_API_KEY"))
+                # Try a simple geocoding request
+                result = gmaps.geocode("New York")
+                gmaps_status = "✅ Connected" if result else "❌ Error connecting"
+            except Exception as e:
+                gmaps_status = f"❌ Error: {str(e)}"
+
+        # Create the status display
+        status_text = Text()
+        status_text.append("Ranger CLI Status\n\n", style="bold green")
+        
+        # Add service statuses with tab separation
+        status_text.append("OpenAI\t\t", style="cyan")
+        status_text.append(f"{openai_status}\n", style="green")
+        
+        status_text.append("Claude\t\t", style="cyan")
+        status_text.append(f"{claude_status}\n", style="green")
+        
+        status_text.append("Google Maps\t", style="cyan")
+        status_text.append(f"{gmaps_status}\n", style="green")
+        
+        status_text.append("\nVersion: 0.1.0", style="dim")
+
+        self.console.print(Panel(
+            status_text,
+            title="[bold blue]Ranger CLI Status[/bold blue]",
+            border_style="blue"
+        ))
+
 def main():
     """Start the Ranger CLI"""
-    cli = CLI()
-    cli.repl()
+    fire.Fire(CLI)
 
 if __name__ == "__main__":
-    fire.Fire({
-        'repl': lambda debug=False: CLI(debug=debug).repl()
-    })
+    main()

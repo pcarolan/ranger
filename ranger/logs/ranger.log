@@ -117,3 +117,70 @@
 2025-05-23 12:58:17,230 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:55
 2025-05-23 12:58:17,230 - INFO - Final response: The weather in Northport, MI is currently partly cloudy with a temperature of 22 degrees Celsius. - /Users/pc/ranger/ranger/router.py:71
 2025-05-23 12:58:17,231 - INFO - Response: The weather in Northport, MI is currently partly cloudy with a temperature of 22 degrees Celsius. - /Users/pc/ranger/ranger/cli.py:93
+2025-05-23 13:01:59,722 - INFO - User query: ranger - /Users/pc/ranger/ranger/cli.py:84
+2025-05-23 13:01:59,726 - INFO - Processing query: ranger - /Users/pc/ranger/ranger/router.py:36
+2025-05-23 13:01:59,726 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:37
+2025-05-23 13:01:59,726 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:38
+2025-05-23 13:02:01,680 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:114
+2025-05-23 13:03:10,670 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:60
+2025-05-23 13:03:10,670 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:61
+2025-05-23 13:03:12,549 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:114
+2025-05-23 13:05:18,790 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:60
+2025-05-23 13:05:18,790 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:61
+2025-05-23 13:05:31,729 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:60
+2025-05-23 13:05:31,730 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:61
+2025-05-23 13:05:51,852 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:60
+2025-05-23 13:05:51,852 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:61
+2025-05-23 13:06:13,015 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:60
+2025-05-23 13:06:13,016 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:61
+2025-05-23 13:06:16,468 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:60
+2025-05-23 13:06:16,468 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:61
+2025-05-23 13:06:25,765 - INFO - User query: Weather in Northport, MI - /Users/pc/ranger/ranger/cli.py:84
+2025-05-23 13:06:25,766 - INFO - Processing query: Weather in Northport, MI - /Users/pc/ranger/ranger/router.py:36
+2025-05-23 13:06:25,766 - INFO - Agent thinking process: - /Users/pc/ranger/ranger/router.py:37
+2025-05-23 13:06:25,766 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:38
+2025-05-23 13:06:28,851 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 13:06:30,441 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 13:06:46,958 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 13:06:57,750 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 13:07:00,056 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 13:07:01,324 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" - /Users/pc/ranger/.venv/lib/python3.13/site-packages/httpx/_client.py:1025
+2025-05-23 13:07:01,330 - INFO - -------------------------------------------------- - /Users/pc/ranger/ranger/router.py:55
+2025-05-23 13:07:01,331 - INFO - Final response: - Temperature: 59.0 Fahrenheit
+- Weather Condition: Sunny
+- Humidity: 40%
+- Wind Speed: 9.320565 miles/hour - /Users/pc/ranger/ranger/router.py:71
+2025-05-23 13:07:01,332 - INFO - Response: - Temperature: 59.0 Fahrenheit
+- Weather Condition: Sunny
+- Humidity: 40%
+- Wind Speed: 9.320565 miles/hour - /Users/pc/ranger/ranger/cli.py:93
+2025-05-23 13:07:15,202 - INFO - User interrupted with KeyboardInterrupt - /Users/pc/ranger/ranger/cli.py:114
+2025-05-23 13:07:20,488 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:60
+2025-05-23 13:07:20,488 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:61
+2025-05-23 13:08:03,421 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:61
+2025-05-23 13:08:03,421 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:62
+2025-05-23 13:08:37,323 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:62
+2025-05-23 13:08:37,323 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:08:37,815 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 13:09:44,443 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:09:44,443 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:09:45,229 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 13:11:59,139 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:11:59,139 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:11:59,153 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:11:59,153 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:12:33,774 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:12:33,774 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:12:33,788 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:12:33,788 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:12:34,329 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 13:13:25,887 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:13:25,887 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:13:25,901 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:13:25,901 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:13:26,633 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194
+2025-05-23 13:14:08,507 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:14:08,507 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:14:08,520 - INFO - ================================================== - /Users/pc/ranger/ranger/cli.py:63
+2025-05-23 13:14:08,520 - INFO - Ranger CLI started - /Users/pc/ranger/ranger/cli.py:64
+2025-05-23 13:14:09,048 - INFO - API queries_quota: 60 - /Users/pc/ranger/.venv/lib/python3.13/site-packages/googlemaps/client.py:194

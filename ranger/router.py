@@ -6,7 +6,7 @@ import logging
 import sys
 import io
 from contextlib import contextmanager
-from weather import get_weather, get_travel_duration
+from .weather import get_weather, get_travel_duration
 
 class Router:
     def __init__(self, debug: bool = False):
