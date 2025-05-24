@@ -43,7 +43,7 @@ class CLI(object):
     def _setup_logging(self):
         """Setup logging configuration"""
         # Create logs directory if it doesn't exist
-        log_dir = Path("../logs")
+        log_dir = Path(__file__).parent.parent / "logs"
         log_dir.mkdir(exist_ok=True)
         
         # Use a single log file
