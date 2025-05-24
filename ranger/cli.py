@@ -80,12 +80,14 @@ class CLI(object):
         status_text.append("API Status\n", style="bold green")
         
         # Check OpenAI status
-        openai_status = "❌ Not configured"
-        if os.getenv("OPENAI_API_KEY"):
+        openai_key = os.getenv("OPENAI_API_KEY")
+        if not openai_key:
+            openai_status = "❌ Not configured"
+        else:
             try:
                 response = requests.get(
                     "https://api.openai.com/v1/models",
-                    headers={"Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}"},
+                    headers={"Authorization": f"Bearer {openai_key}"},
                     timeout=5
                 )
                 openai_status = "✅ Connected" if response.status_code == 200 else "❌ Error connecting"
@@ -93,13 +95,15 @@ class CLI(object):
                 openai_status = f"❌ Error: {str(e)}"
         
         # Check Claude status
-        claude_status = "❌ Not configured"
-        if os.getenv("ANTHROPIC_API_KEY"):
+        claude_key = os.getenv("ANTHROPIC_API_KEY")
+        if not claude_key:
+            claude_status = "❌ Not configured"
+        else:
             try:
                 response = requests.get(
                     "https://api.anthropic.com/v1/messages",
                     headers={
-                        "x-api-key": os.getenv("ANTHROPIC_API_KEY"),
+                        "x-api-key": claude_key,
                         "anthropic-version": "2023-06-01"
                     },
                     timeout=5
@@ -183,6 +187,7 @@ class CLI(object):
                 with Live(spinner, refresh_per_second=10) as live:
                     # Route the query and get the response
                     response, thoughts, tools_used = self.router.route(user_input)
+                    self.logger.info(f"Router response: {response}, thoughts: {thoughts}, tools_used: {tools_used}")
                 
                 # Log the response
                 self.logger.info(f"Response: {response}")

@@ -31,17 +31,17 @@ def test_get_weather_agent_initialization():
     mock_code_agent = MagicMock()
     with patch('smolagents.tool', side_effect=lambda f: f), \
          patch('smolagents.CodeAgent', return_value=mock_code_agent) as mock_code_agent_class, \
-         patch('smolagents.models.OpenAIServerModel') as mock_openai_model_class:
-        mock_openai_model_instance = MagicMock()
-        mock_openai_model_class.return_value = mock_openai_model_instance
+         patch('ranger.models.claude.ClaudeServerModel') as mock_claude_model_class:
+        mock_claude_model_instance = MagicMock()
+        mock_claude_model_class.return_value = mock_claude_model_instance
         import ranger.tools.weather
         importlib.reload(ranger.tools.weather)
         ranger.tools.weather.get_weather("Test City")
-        print(f"DEBUG: mock_openai_model_class.call_args_list = {mock_openai_model_class.call_args_list}")
-        mock_openai_model_class.assert_called_once_with(model_id="gpt-4")
+        print(f"DEBUG: mock_claude_model_class.call_args_list = {mock_claude_model_class.call_args_list}")
+        mock_claude_model_class.assert_called_once()
         mock_code_agent_class.assert_called_once_with(
             tools=[],
-            model=mock_openai_model_instance,
+            model=mock_claude_model_instance,
             additional_authorized_imports=["datetime"]
         )
 

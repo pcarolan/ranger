@@ -7,14 +7,21 @@ import sys
 import io
 from contextlib import contextmanager
 from .tools.weather import get_weather, get_travel_duration
+from .models.claude import ClaudeServerModel
 
 class Router:
-    def __init__(self, debug: bool = False):
+    def __init__(self, debug: bool = False, model_type: str = "openai"):
         self.logger = logging.getLogger(__name__)
         self.debug = debug
+        if model_type == "openai":
+            model = OpenAIServerModel(model_id="gpt-4")
+        elif model_type == "claude":
+            model = ClaudeServerModel()
+        else:
+            raise ValueError("Unsupported model_type. Use 'openai' or 'claude'.")
         self.agent = CodeAgent(
             tools=[get_weather, get_travel_duration],
-            model=OpenAIServerModel(model_id="gpt-4"),
+            model=model,
             additional_authorized_imports=["datetime"]
         )
 

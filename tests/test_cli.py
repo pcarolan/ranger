@@ -31,18 +31,19 @@ def mock_env_vars():
 
 def test_status_with_no_keys(cli):
     """Test status when no API keys are configured."""
-    with patch('requests.get') as mock_get:
+    with patch('requests.get') as mock_get, \
+         patch.dict(os.environ, {"OPENAI_API_KEY": "", "ANTHROPIC_API_KEY": "", "GMAPS_API_KEY": ""}, clear=True):
         # Mock the console to capture output
         mock_console = MagicMock(spec=Console)
         cli.console = mock_console
-        
+
         # Call the status method
         cli.status()
-        
+
         # Verify the console was called with a panel
         mock_console.print.assert_called_once()
         panel_call = mock_console.print.call_args[0][0]
-        
+
         # Check that the panel contains the expected text
         panel_text = str(panel_call.renderable)
         assert "OpenAI" in panel_text
