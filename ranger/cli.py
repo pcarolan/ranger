@@ -27,7 +27,7 @@ class CLI(object):
         ("get_travel_duration", "Gets the travel time between two places.")
     ]
 
-    def __init__(self, debug: bool = False):
+    def __init__(self, debug: bool = False, log_level: str = "INFO"):
         self.console = Console()
         self.debug = debug
         # Load environment variables from .env file
@@ -38,9 +38,9 @@ class CLI(object):
         self.router = Router(debug=debug)
         
         # Setup logging
-        self._setup_logging()
+        self._setup_logging(log_level)
 
-    def _setup_logging(self):
+    def _setup_logging(self, log_level: str):
         """Setup logging configuration"""
         # Create logs directory if it doesn't exist
         log_dir = Path(__file__).parent.parent / "logs"
@@ -51,7 +51,7 @@ class CLI(object):
         
         # Configure logging to only output to the log file
         logging.basicConfig(
-            level=logging.DEBUG,
+            level=getattr(logging, log_level),
             format='%(asctime)s - %(levelname)s - %(message)s - %(pathname)s:%(lineno)d',
             handlers=[
                 logging.FileHandler(log_file),
@@ -61,9 +61,15 @@ class CLI(object):
         
         # Configure smolagents logger to only output to our log file
         smolagents_logger = logging.getLogger('smolagents')
-        smolagents_logger.setLevel(logging.DEBUG)
+        smolagents_logger.setLevel(getattr(logging, log_level))
         smolagents_logger.addHandler(logging.FileHandler(log_file))
         smolagents_logger.propagate = False  # Prevent propagation to root logger
+        
+        # Configure httpcore logger to suppress DEBUG logs
+        httpcore_logger = logging.getLogger('httpcore')
+        httpcore_logger.setLevel(getattr(logging, log_level))
+        httpcore_logger.addHandler(logging.FileHandler(log_file))
+        httpcore_logger.propagate = False  # Prevent propagation to root logger
         
         self.logger = logging.getLogger(__name__)
         self.logger.info("="*50)  # Add a separator for new sessions
@@ -246,6 +252,13 @@ class CLI(object):
                 expand=True
             )
         )
+
+    def _check_status(self):
+        """Check the status of all required APIs."""
+        print("\nChecking API status...")
+        print(f"OpenAI API: {get_weather.check_status()}")
+        print(f"Google Maps API: {get_travel_duration.check_status()}")
+        print()
 
 def main():
     """Start the Ranger CLI"""

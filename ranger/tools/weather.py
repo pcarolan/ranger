@@ -8,6 +8,8 @@ from smolagents.models import OpenAIServerModel
 from ranger.tools.maps import get_travel_duration
 import logging
 from ranger.models.claude import ClaudeServerModel
+import os
+import requests
 
 @tool
 def get_weather(location: str, model_type: str = "claude") -> str:
@@ -46,4 +48,39 @@ def get_weather(location: str, model_type: str = "claude") -> str:
     logger.debug("Prompt sent to agent.run: %r", prompt)
     response = agent.run(prompt)
     logger.debug("Response from agent.run: %r", response)
-    return response 
+    return response
+
+@staticmethod
+def check_status() -> str:
+    """Check the status of the OpenAI and Claude APIs."""
+    openai_key = os.getenv("OPENAI_API_KEY")
+    claude_key = os.getenv("ANTHROPIC_API_KEY")
+    openai_status = "❌ Not configured"
+    claude_status = "❌ Not configured"
+    
+    if openai_key:
+        try:
+            response = requests.get(
+                "https://api.openai.com/v1/models",
+                headers={"Authorization": f"Bearer {openai_key}"},
+                timeout=5
+            )
+            openai_status = "✅ Connected" if response.status_code == 200 else "❌ Error connecting"
+        except Exception as e:
+            openai_status = f"❌ Error: {str(e)}"
+    
+    if claude_key:
+        try:
+            response = requests.get(
+                "https://api.anthropic.com/v1/messages",
+                headers={
+                    "x-api-key": claude_key,
+                    "anthropic-version": "2023-06-01"
+                },
+                timeout=5
+            )
+            claude_status = "✅ Connected" if response.status_code == 200 else "❌ Error connecting"
+        except Exception as e:
+            claude_status = f"❌ Error: {str(e)}"
+    
+    return f"OpenAI: {openai_status}, Claude: {claude_status}" 
