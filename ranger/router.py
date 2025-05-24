@@ -6,7 +6,8 @@ import logging
 import sys
 import io
 from contextlib import contextmanager
-from .tools.weather import get_weather, get_travel_duration
+from .tools.weather import get_weather
+from .tools.maps import get_travel_duration
 from .models.claude import ClaudeServerModel
 
 class Router:

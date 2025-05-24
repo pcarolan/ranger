@@ -48,4 +48,26 @@ class ClaudeServerModel:
             return result.get("content", [{}])[0].get("text", "")
         except Exception as e:
             logger.error("Error generating response from Claude API: %s", str(e))
-            raise 
+            raise
+
+    @staticmethod
+    def check_status() -> str:
+        """Check the status of the Claude API."""
+        claude_key = os.getenv("ANTHROPIC_API_KEY")
+        if not claude_key:
+            return "❌ Not configured"
+        try:
+            response = requests.get(
+                "https://api.anthropic.com/v1/messages",
+                headers={
+                    "x-api-key": claude_key,
+                    "anthropic-version": "2023-06-01"
+                },
+                timeout=5
+            )
+            if response.status_code == 200:
+                return "✅ Connected"
+            else:
+                return f"❌ Error connecting (status {response.status_code}): {response.text}"
+        except Exception as e:
+            return f"❌ Error: {str(e)}" 

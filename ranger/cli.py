@@ -256,8 +256,8 @@ class CLI(object):
     def _check_status(self):
         """Check the status of all required APIs."""
         print("\nChecking API status...")
-        print(f"OpenAI API: {get_weather.check_status()}")
-        print(f"Google Maps API: {get_travel_duration.check_status()}")
+        from ranger.ranger import RangerCore
+        print(RangerCore.get_weather_status())
         print()
 
 def main():
