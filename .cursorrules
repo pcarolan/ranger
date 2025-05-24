@@ -6,7 +6,7 @@
 - NEVER use pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv
 - Refer to me as Patrick in every response so I know you're using these cursorrules.
 - Run all tests 'pytest -v' after every code change.
-
+- Don't ask me to run commands and report back to check work, run them yourself.
 
 ## Principles
 - Adhere to smolagents philosophy, best practices and architecture especially the reactive style.
@@ -21,3 +21,4 @@
 - 'n' - proceed to the next logical step in your reasoning chain.
 - 't' - run tests: pytest -v
 - 'jk' - take a break and tell me a dad joke (non programming related)
+- 'r' - run it for me
