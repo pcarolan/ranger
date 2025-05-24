@@ -51,7 +51,7 @@ class CLI(object):
         
         # Configure logging to only output to the log file
         logging.basicConfig(
-            level=logging.INFO,
+            level=logging.DEBUG,
             format='%(asctime)s - %(levelname)s - %(message)s - %(pathname)s:%(lineno)d',
             handlers=[
                 logging.FileHandler(log_file),
@@ -61,7 +61,7 @@ class CLI(object):
         
         # Configure smolagents logger to only output to our log file
         smolagents_logger = logging.getLogger('smolagents')
-        smolagents_logger.setLevel(logging.INFO)
+        smolagents_logger.setLevel(logging.DEBUG)
         smolagents_logger.addHandler(logging.FileHandler(log_file))
         smolagents_logger.propagate = False  # Prevent propagation to root logger
         
@@ -231,6 +231,21 @@ class CLI(object):
                         expand=True
                     )
                 )
+
+    def run(self, query: str):
+        """Process a query directly without using the REPL."""
+        self.logger.info(f"Processing query: {query}")
+        response, thoughts, tools_used = self.router.route(query)
+        self.logger.info(f"Router response: {response}, thoughts: {thoughts}, tools_used: {tools_used}")
+        tools_text = f"\n\n[gray]Tools used: {', '.join(tools_used)}[/gray]" if tools_used else ""
+        self.console.print(
+            Panel(
+                Text(response + tools_text, style="magenta"),
+                title="[bold]Response[/bold]",
+                border_style="magenta",
+                expand=True
+            )
+        )
 
 def main():
     """Start the Ranger CLI"""

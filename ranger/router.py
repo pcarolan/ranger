@@ -62,6 +62,7 @@ class Router:
         with self._redirect_stdout():
             response = self.agent.run(prompt)
             print("DEBUG: raw response =", response)  # Debug print
+            self.logger.debug("Raw agent response: %s", response)  # Added debug log
         
         self.logger.info("-" * 50)
         

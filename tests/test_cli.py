@@ -154,4 +154,16 @@ def test_repl_eof_error(cli):
     with patch.object(cli, 'input', side_effect=EOFError), \
          patch.object(cli.console, 'print') as mock_print:
         cli.repl()
-        assert any("Goodbye" in str(call) for call in mock_print.call_args_list) 
+        assert any("Goodbye" in str(call) for call in mock_print.call_args_list)
+
+def test_run_command(cli):
+    """Test the run command processes a query directly."""
+    with patch.object(cli.console, 'print') as mock_print, \
+         patch.object(cli.router, 'route', return_value=("response", "thoughts", ["get_weather"])):
+        cli.run("find the weather in ny")
+        # Should print the response and tools used
+        mock_print.assert_called_once()
+        panel_call = mock_print.call_args[0][0]
+        panel_text = str(panel_call.renderable)
+        assert "response" in panel_text
+        assert "Tools used: get_weather" in panel_text 
